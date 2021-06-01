@@ -1,0 +1,28 @@
+//Counter
+using System;
+
+	public class emp
+	{
+		private static int cnt;
+	public emp()
+	{
+		cnt++;
+	}
+		public static int counter
+		{
+			get {return cnt;}
+			
+		}
+	}
+	
+	public class class5
+	{
+	public static void Main()
+	{
+		emp e=new emp();
+		emp e1=new emp();
+		emp e2=new emp();
+		Console.WriteLine(emp.counter);
+		Console.ReadLine();
+	}
+}
