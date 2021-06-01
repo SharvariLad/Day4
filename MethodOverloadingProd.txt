@@ -1,0 +1,35 @@
+//Method Overloading
+using System;
+
+namespace Day_4
+{
+	public class Multiplication
+	{
+		int a = 9, b = 8;
+		public void Product()
+		{
+			Console.WriteLine("Product is :" +(a*b));
+		}
+		public void Product(int a,int b)
+		{
+			Console.WriteLine("Product is :" +(a*b));
+		}
+		public int Product(int a, int b, int c)
+		{
+			return(a*b);
+		}
+		public void Product(string a, string b)
+		{
+			Console.WriteLine("Product is :" +(Convert.ToInt32(a)*Convert.ToInt32(b)));
+		}
+		public static void Main(string[] args)
+		{
+			Multiplication p = new Multiplication();
+			p.Product();
+			p.Product(1,2);
+			Console.WriteLine(p.Product(1,2,3));
+			p.Product("9","1");
+			Console.ReadLine();
+		}
+	}
+}

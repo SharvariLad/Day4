@@ -1,0 +1,35 @@
+//Operational Overloading
+using System;
+
+namespace Day_4
+{
+	public class Product
+	{
+		public int no1, no2;
+		public Product(int no1, int no2)
+		{
+			this.no1 = no1;
+			this.no2 = no2;
+		}
+		public static Product operator *(Product P1,Product P2)
+		{
+			Product P3 = new Product(0,0);
+			P3.no1 = P1.no1*P2.no1;
+			P3.no2 = P1.no2*P2.no2;
+			return P3;
+		}
+	}
+	public class Class1
+	{
+		public static void Main()
+		{
+			Product P1 = new Product(9,1);
+			Product P2 = new Product(9,2);
+			Product P3 = new Product(0,0);
+			Console.WriteLine("Values before product no1 :"+P3.no1+"|| no2 :"+P3.no2);
+			P3 = P1*P2;
+			Console.WriteLine("Values after product no1 :"+P3.no1+"|| no2 :"+P3.no2);
+			Console.ReadLine();
+		}
+	}
+}

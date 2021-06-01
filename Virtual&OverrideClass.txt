@@ -1,0 +1,34 @@
+//virtual and override class
+using System;
+
+namespace fourday
+{
+	public class BaseClass
+	{
+		public virtual void Print()
+		{
+			Console.WriteLine("Base Class");
+		}	
+	}
+	public class DerivedClass:BaseClass
+	{
+		public override void Print()
+		{
+			Console.WriteLine("Derived Class");
+		}	
+	}
+	public class Class1
+		{
+			public static void Main()
+			{
+				BaseClass baseclass=new BaseClass();
+				baseclass.Print();
+				
+				baseclass=new DerivedClass();
+				baseclass.Print();
+				
+				Console.ReadLine();
+			}
+		}
+	
+}

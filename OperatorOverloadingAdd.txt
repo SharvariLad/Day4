@@ -1,0 +1,37 @@
+//Operator overloading
+//Addition
+using System;
+
+namespace fourday
+{
+	public class Sum
+	{
+		public int num1,num2;
+		public Sum(int num1, int num2)
+		{
+			this.num1=num1;
+			this.num2=num2;
+		}	
+		public static Sum operator +(Sum S1,Sum S2)
+		{
+			Sum S3=new Sum(0,0);
+			S3.num1=S1.num1+S2.num1;
+			S3.num2=S1.num2+S2.num2;
+			return S3;
+		}
+	}
+		public class Class1
+		{
+			public static void Main()
+			{
+				Sum S1=new Sum(1,2);
+				Sum S2=new Sum(2,2);
+				Sum S3=new Sum(0,0);
+				Console.WriteLine("Values before sum Number 1: "+S3.num1+" Number 2: "+S3.num2);
+				S3=S1+S2;
+				Console.WriteLine("Values after sum Number 1: "+S3.num1+" Number 2: "+S3.num2);
+				Console.ReadLine();
+			}
+		}
+	
+}

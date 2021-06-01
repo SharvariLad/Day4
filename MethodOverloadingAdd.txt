@@ -1,0 +1,35 @@
+//function overloading
+//Addition
+using System;
+
+namespace fourday
+{
+public class Program
+{
+	int a=6,b=7;
+	public void Sum()
+	{
+		Console.WriteLine("Sum is:"+(a+b));
+	}
+	public void Sum(int a,int b)
+	{
+		Console.WriteLine("Sum is:"+(a+b));
+	}
+	public int Sum(int a,int b,int c)
+	{
+		return (a+b);
+	}
+	public void Sum(string a,string b)
+	{
+		Console.WriteLine("Sum is:"+(Convert.ToInt32(a)+Convert.ToInt32(b)));
+	}
+	public static void Main()
+	{
+		Program p=new Program();
+		p.Sum();
+		p.Sum(1,2);
+		Console.WriteLine(p.Sum(1,2,3));
+		Console.ReadLine();
+	}
+}
+}
